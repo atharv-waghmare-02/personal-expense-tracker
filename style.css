@@ -1,0 +1,120 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+header {
+  background: #4338ca;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+
+main {
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 0 16px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card, .panel {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.card p {
+  font-size: 25px;
+  font-weight: bold;
+  color: #4338ca;
+  overflow-wrap: anywhere;
+}
+
+.panel {
+  margin-top: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+input, select, button {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+  min-width: 0;
+}
+
+button {
+  background: #4338ca;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3730a3;
+}
+
+#transactions {
+  padding: 0;
+  list-style: none;
+}
+
+#transactions li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.delete {
+  background: #dc2626;
+  padding: 7px 10px;
+}
+
+@media (max-width: 600px) {
+  .summary {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .card {
+    padding: 12px 18px;
+  }
+
+  .card p {
+    margin: 8px 0;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+}
